@@ -3,16 +3,17 @@ var nazwaimg = "slider-img" + n;
 
 function automatyczne(){
 
-    $('#slider').removeClass(nazwaimg);
-
+    $('#slider').addClass(nazwaimg);
+    
     if(n==5){
         n = 0;
     };
 
-    n += 1;
+    n -= 1;
     nazwaimg = "slider-img" + n;
+    n += 2;
 
-    $('#slider').addClass(nazwaimg);
+    $('#slider').removeClass(nazwaimg);
 }
 
 setInterval(automatyczne, 5000);
